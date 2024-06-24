@@ -4,11 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telegram Mini-App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form, button {
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
 <h1>Telegram Mini-App</h1>
+
+<h2>Add User</h2>
+<form id="add-user-form">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <br>
+  <label for="telegram_id">Telegram ID:</label>
+  <input type="text" id="telegram_id" name="telegram_id" required>
+  <br>
+  <button type="submit">Add User</button>
+</form>
+
+<h2>Fetch Users</h2>
 <button id="fetch-users">Fetch Users</button>
 <ul id="users-list"></ul>
-<script type="module" src="/main.js"></script>
+
+<h2>Bot Actions</h2>
+<button id="run-bot">Run Bot</button>
+<div id="bot-results"></div>
+
+<script src="main.js"></script>
 </body>
 </html>
